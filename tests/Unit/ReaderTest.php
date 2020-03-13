@@ -60,4 +60,19 @@ class ReaderTest extends TestCase
         $this->assertInstanceOf(Collection::class, $translations);
         $this->assertEquals($translations->count(), 4);
     }
+
+    /** @test */
+    public function it_scans_subdirectories()
+    {
+        $this->helper->createLangFiles('en', 'app', ['title' => 'Awesome']);
+        $this->helper->createLangFiles('fr', 'app', ['title' => 'Super']);
+        $this->helper->createLangFiles('en/sub', 'backend', ['version' => '1.0']);
+        $this->helper->createLangFiles('fr/sub', 'backend', ['version' => '1.0']);
+        $this->helper->createLangFiles('fr/sub/foo', 'bar', ['text' => 'Wow']);
+
+        $translations = $this->app[Reader::class]->scan();
+
+        $this->assertInstanceOf(Collection::class, $translations);
+        $this->assertEquals($translations->count(), 5);
+    }
 }

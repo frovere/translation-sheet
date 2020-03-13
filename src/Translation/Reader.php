@@ -4,8 +4,8 @@ namespace Nikaia\TranslationSheet\Translation;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Application;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
 
 class Reader
 {
@@ -33,6 +33,11 @@ class Reader
     private $locale;
 
     /**
+     * @var string
+     */
+    private $path;
+
+    /**
      * Reader.
      *
      * @param Application $app
@@ -42,6 +47,7 @@ class Reader
     {
         $this->app = $app;
         $this->files = $files;
+        $this->path = $app->make('path.lang');
     }
 
     /**
@@ -70,7 +76,7 @@ class Reader
         $this->translations = new Collection;
 
         // App directory
-        $this->scanDirectory($this->app->make('path.lang'));
+        $this->scanDirectory($this->path);
 
         return $this->translations;
     }
@@ -85,8 +91,7 @@ class Reader
         foreach ($this->files->directories($path) as $directory) {
             if ($this->isVendorDirectory($directory)) {
                 $this->scanVendorDirectory($directory);
-            }
-            else {
+            } else {
                 $this->loadTranslationsInDirectory($directory, $this->getLocaleFromDirectory($directory), null);
             }
         }
@@ -122,8 +127,13 @@ class Reader
 
         foreach ($this->files->files($directory) as $file) {
             $info = pathinfo($file);
-            $group = $info['filename'];
+            $subfolder = explode($this->path.'/'.$locale.'/', $directory)[1] ?? false;
+            $group = $subfolder ? $subfolder.'/'.$info['filename'] : $info['filename'];
             $this->loadTranslations($locale, $group, $namespace, $file);
+        }
+
+        foreach ($this->files->directories($directory) as $subdirectory) {
+            $this->loadTranslationsInDirectory($subdirectory, $locale, $namespace);
         }
     }
 
@@ -196,7 +206,7 @@ class Reader
      */
     private function toRelative($path)
     {
-        $relative = str_replace($this->app->make('path.lang').DIRECTORY_SEPARATOR, '', $path);
+        $relative = str_replace($this->path.DIRECTORY_SEPARATOR, '', $path);
         $relative = str_replace('\\', '/', $relative);
 
         return $relative;
