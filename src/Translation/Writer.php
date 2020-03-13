@@ -46,7 +46,11 @@ class Writer
     {
         $this
             ->groupTranslationsByFile()
-            ->map(function ($items, $sourceFile) {
+            ->each(function ($items, $sourceFile) {
+                if ($this->files->extension($sourceFile) == 'json') {
+                    return $this->writeJsonFile($this->app->make('path.lang').'/'.$sourceFile, $items);
+                }
+
                 $this->writeFile(
                     $this->app->make('path.lang').'/'.$sourceFile,
                     $items
@@ -65,6 +69,17 @@ class Writer
         }
 
         $this->files->put($file, $content);
+    }
+
+    protected function writeJsonFile($file, $items)
+    {
+        $this->output->writeln('  JSON: '.$file);
+
+        if (! $this->files->isDirectory($dir = dirname($file))) {
+            $this->files->makeDirectory($dir, 0755, true);
+        }
+
+        $this->files->put($file, json_encode($items, JSON_PRETTY_PRINT));
     }
 
     protected function groupTranslationsByFile()
@@ -97,11 +112,14 @@ class Writer
                 // For instance, we have `app.title` that is the same for each locale,
                 // We dont want to translate it to every locale, and prefer letting
                 // Laravel default back to the default locale.
-                if (! isset($translation[$locale])) {
+                if ($this->skipToDefault($translation, $locale)) {
                     continue;
                 }
 
-                $localeFile = str_replace('{locale}/', $locale.'/', $translation['sourceFile']);
+                $localeFile = $translation['sourceFile'] == '{locale}.json' ?
+                    $locale . '.json' :
+                    str_replace('{locale}/', $locale . '/', $translation['sourceFile']);
+
                 if (empty($files[$localeFile])) {
                     $files[$localeFile] = [];
                 }
@@ -111,5 +129,14 @@ class Writer
         }
 
         return $files;
+    }
+
+    private function skipToDefault($translation, $locale)
+    {
+        if (! isset($translation[$locale])) {
+            return true;
+        }
+
+        return empty($translation[$locale]) && $translation['sourceFile'] == '{locale}.json';
     }
 }
