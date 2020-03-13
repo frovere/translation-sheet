@@ -95,6 +95,10 @@ class Reader
                 $this->loadTranslationsInDirectory($directory, $this->getLocaleFromDirectory($directory), null);
             }
         }
+
+        foreach ($this->files->files($path) as $file) {
+            $this->loadTranslations($file->getBasename('.json'), '*', '*', $file);
+        }
     }
 
     /**

@@ -75,4 +75,16 @@ class ReaderTest extends TestCase
         $this->assertInstanceOf(Collection::class, $translations);
         $this->assertEquals($translations->count(), 5);
     }
+
+    /** @test */
+    public function it_scans_json_files()
+    {
+        $this->helper->createJsonLangFiles('fr', ['Hello!' => 'Bonjour !']);
+        $this->helper->createJsonLangFiles('es', ['Hello!' => '¡Hola!']);
+
+        $translations = $this->app[Reader::class]->scan();
+
+        $this->assertInstanceOf(Collection::class, $translations);
+        $this->assertEquals($translations->count(), 2);
+    }
 }
