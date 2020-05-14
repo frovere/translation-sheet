@@ -1,6 +1,6 @@
 <?php
 
-namespace Nikaia\TranslationSheet;
+namespace Felrov\TranslationSheet;
 
 use Illuminate\Support\Collection;
 

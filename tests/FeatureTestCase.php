@@ -1,10 +1,10 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Test;
+namespace Felrov\TranslationSheet\Test;
 
-use Nikaia\TranslationSheet\Spreadsheet;
-use Nikaia\TranslationSheet\Test\FixtureClasses\FooServiceProvider;
-use Nikaia\TranslationSheet\TranslationSheetServiceProvider;
+use Felrov\TranslationSheet\Spreadsheet;
+use Felrov\TranslationSheet\Test\FixtureClasses\FooServiceProvider;
+use Felrov\TranslationSheet\TranslationSheetServiceProvider;
 
 abstract class FeatureTestCase extends \Orchestra\Testbench\TestCase
 {

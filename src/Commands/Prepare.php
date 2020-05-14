@@ -1,12 +1,12 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Commands;
+namespace Felrov\TranslationSheet\Commands;
 
 use Illuminate\Console\Command;
-use Nikaia\TranslationSheet\Pusher;
-use Nikaia\TranslationSheet\Spreadsheet;
-use Nikaia\TranslationSheet\Translation\Writer;
-use Nikaia\TranslationSheet\Util;
+use Felrov\TranslationSheet\Pusher;
+use Felrov\TranslationSheet\Spreadsheet;
+use Felrov\TranslationSheet\Translation\Writer;
+use Felrov\TranslationSheet\Util;
 
 class Prepare extends Command
 {

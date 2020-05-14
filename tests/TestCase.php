@@ -1,9 +1,9 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Test;
+namespace Felrov\TranslationSheet\Test;
 
 use Illuminate\Console\Application;
-use Nikaia\TranslationSheet\TranslationSheetServiceProvider;
+use Felrov\TranslationSheet\TranslationSheetServiceProvider;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {

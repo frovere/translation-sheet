@@ -1,13 +1,13 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Test\Unit;
+namespace Felrov\TranslationSheet\Test\Unit;
 
 use Mockery;
 use GuzzleHttp\Subscriber\Mock;
-use Nikaia\TranslationSheet\Spreadsheet;
-use Nikaia\TranslationSheet\Sheet\Styles;
-use Nikaia\TranslationSheet\Test\TestCase;
-use Nikaia\TranslationSheet\Sheet\MetaSheet;
+use Felrov\TranslationSheet\Spreadsheet;
+use Felrov\TranslationSheet\Sheet\Styles;
+use Felrov\TranslationSheet\Test\TestCase;
+use Felrov\TranslationSheet\Sheet\MetaSheet;
 
 class MetaSheetTest extends TestCase
 {

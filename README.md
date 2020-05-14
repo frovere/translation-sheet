@@ -3,11 +3,11 @@
 Translating Laravel languages files using a Google Spreadsheet.
 
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/nikaia/translation-sheet.svg?style=flat-square)](https://packagist.org/packages/nikaia/translation-sheet)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/felrov/translation-sheet.svg?style=flat-square)](https://packagist.org/packages/felrov/translation-sheet)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/nikaia/translation-sheet/master.svg?style=flat-square)](https://travis-ci.org/nikaia/translation-sheet)
+[![Build Status](https://img.shields.io/travis/felrov/translation-sheet/master.svg?style=flat-square)](https://travis-ci.org/felrov/translation-sheet)
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/62480992-18f7-4544-99b2-9c529e9feb23.svg?style=flat-square)](https://insight.sensiolabs.com/projects/62480992-18f7-4544-99b2-9c529e9feb23)
-[![Quality Score](https://img.shields.io/scrutinizer/g/nikaia/translation-sheet.svg?style=flat-square)](https://scrutinizer-ci.com/g/nikaia/translation-sheet)
+[![Quality Score](https://img.shields.io/scrutinizer/g/felrov/translation-sheet.svg?style=flat-square)](https://scrutinizer-ci.com/g/felrov/translation-sheet)
 
 
 <p align="center">
@@ -31,13 +31,13 @@ Translating Laravel languages files using a Google Spreadsheet.
 - Install package
 
     ```bash
-    $ composer require nikaia/translation-sheet
+    $ composer require --dev felrov/translation-sheet
     ```
     
 - If Laravel version <= 5.4,  Add service provider to your 'config/app.php'. For version >= 5.5, package will be auto-discoverd by Laravel.
 
     ```php
-    Nikaia\TranslationSheet\TranslationSheetServiceProvider::class,
+    Felrov\TranslationSheet\TranslationSheetServiceProvider::class,
     ```
 
 
@@ -45,7 +45,7 @@ Translating Laravel languages files using a Google Spreadsheet.
 - Configuration can be done via environments variables, but if you prefer you can override the configuration by publishing the package config file using :
     
     ```bash
-    $ php artisan vendor:publish --provider="Nikaia\TranslationSheet\TranslationSheetServiceProvider"
+    $ php artisan vendor:publish --provider="Felrov\TranslationSheet\TranslationSheetServiceProvider"
     ```
 
 ### Requirements

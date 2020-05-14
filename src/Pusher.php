@@ -1,13 +1,13 @@
 <?php
 
-namespace Nikaia\TranslationSheet;
+namespace Felrov\TranslationSheet;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Nikaia\TranslationSheet\Commands\Output;
-use Nikaia\TranslationSheet\Sheet\TranslationsSheet;
-use Nikaia\TranslationSheet\Translation\Reader;
-use Nikaia\TranslationSheet\Translation\Transformer;
+use Felrov\TranslationSheet\Commands\Output;
+use Felrov\TranslationSheet\Sheet\TranslationsSheet;
+use Felrov\TranslationSheet\Translation\Reader;
+use Felrov\TranslationSheet\Translation\Transformer;
 
 class Pusher
 {

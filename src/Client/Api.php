@@ -1,6 +1,6 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Client;
+namespace Felrov\TranslationSheet\Client;
 
 use Google_Service_Sheets;
 use Google_Service_Sheets_BatchUpdateSpreadsheetRequest;

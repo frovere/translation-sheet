@@ -1,11 +1,11 @@
 <?php
 
-namespace Nikaia\TranslationSheet;
+namespace Felrov\TranslationSheet;
 
 use Illuminate\Support\Str;
-use Nikaia\TranslationSheet\Client\Api;
-use Nikaia\TranslationSheet\Sheet\Styles;
-use Nikaia\TranslationSheet\Sheet\TranslationsSheetCoordinates;
+use Felrov\TranslationSheet\Client\Api;
+use Felrov\TranslationSheet\Sheet\Styles;
+use Felrov\TranslationSheet\Sheet\TranslationsSheetCoordinates;
 
 class Spreadsheet
 {

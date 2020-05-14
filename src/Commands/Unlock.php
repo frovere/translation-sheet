@@ -1,9 +1,9 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Commands;
+namespace Felrov\TranslationSheet\Commands;
 
 use Illuminate\Console\Command;
-use Nikaia\TranslationSheet\Sheet\TranslationsSheet;
+use Felrov\TranslationSheet\Sheet\TranslationsSheet;
 
 class Unlock extends Command
 {

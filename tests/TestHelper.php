@@ -1,11 +1,11 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Test;
+namespace Felrov\TranslationSheet\Test;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
-use Nikaia\TranslationSheet\Spreadsheet;
-use Nikaia\TranslationSheet\Translation\Item;
+use Felrov\TranslationSheet\Spreadsheet;
+use Felrov\TranslationSheet\Translation\Item;
 
 class TestHelper
 {

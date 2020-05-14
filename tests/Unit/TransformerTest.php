@@ -1,9 +1,9 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Test\Unit;
+namespace Felrov\TranslationSheet\Test\Unit;
 
-use Nikaia\TranslationSheet\Test\TestCase;
-use Nikaia\TranslationSheet\Translation\Transformer;
+use Felrov\TranslationSheet\Test\TestCase;
+use Felrov\TranslationSheet\Translation\Transformer;
 
 class TransformerTest extends TestCase
 {

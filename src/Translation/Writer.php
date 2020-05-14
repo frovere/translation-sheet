@@ -1,14 +1,14 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Translation;
+namespace Felrov\TranslationSheet\Translation;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use Nikaia\TranslationSheet\Commands\Output;
-use Nikaia\TranslationSheet\Spreadsheet;
-use Nikaia\TranslationSheet\Util;
+use Felrov\TranslationSheet\Commands\Output;
+use Felrov\TranslationSheet\Spreadsheet;
+use Felrov\TranslationSheet\Util;
 
 class Writer
 {

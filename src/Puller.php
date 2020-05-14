@@ -1,10 +1,10 @@
 <?php
 
-namespace Nikaia\TranslationSheet;
+namespace Felrov\TranslationSheet;
 
-use Nikaia\TranslationSheet\Commands\Output;
-use Nikaia\TranslationSheet\Sheet\TranslationsSheet;
-use Nikaia\TranslationSheet\Translation\Writer;
+use Felrov\TranslationSheet\Commands\Output;
+use Felrov\TranslationSheet\Sheet\TranslationsSheet;
+use Felrov\TranslationSheet\Translation\Writer;
 
 class Puller
 {

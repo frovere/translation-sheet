@@ -1,11 +1,11 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Test\Unit;
+namespace Felrov\TranslationSheet\Test\Unit;
 
 use Illuminate\Support\Collection;
-use Nikaia\TranslationSheet\Test\TestCase;
-use Nikaia\TranslationSheet\Translation\Item;
-use Nikaia\TranslationSheet\Translation\Reader;
+use Felrov\TranslationSheet\Test\TestCase;
+use Felrov\TranslationSheet\Translation\Item;
+use Felrov\TranslationSheet\Translation\Reader;
 
 class ReaderTest extends TestCase
 {
@@ -47,7 +47,7 @@ class ReaderTest extends TestCase
         $this->assertEquals($item->value, '1.0');
     }
 
-    /** @test : https://github.com/nikaia/translation-sheet/pull/31 */
+    /** @test : https://github.com/Felrov/translation-sheet/pull/31 */
     public function it_scans_all_directories_even_after_encountring_vendor()
     {
         $this->helper->createLangFiles('en', 'app', ['title' => 'Awesome']);

@@ -1,13 +1,13 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Test\Unit;
+namespace Felrov\TranslationSheet\Test\Unit;
 
 use Mockery;
-use Nikaia\TranslationSheet\Client\Api;
-use Nikaia\TranslationSheet\Spreadsheet;
-use Nikaia\TranslationSheet\Sheet\Styles;
-use Nikaia\TranslationSheet\Test\TestCase;
-use Nikaia\TranslationSheet\Sheet\TranslationsSheetCoordinates;
+use Felrov\TranslationSheet\Client\Api;
+use Felrov\TranslationSheet\Spreadsheet;
+use Felrov\TranslationSheet\Sheet\Styles;
+use Felrov\TranslationSheet\Test\TestCase;
+use Felrov\TranslationSheet\Sheet\TranslationsSheetCoordinates;
 
 class SpreadsheetTest extends TestCase
 {

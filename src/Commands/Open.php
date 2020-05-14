@@ -1,9 +1,9 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Commands;
+namespace Felrov\TranslationSheet\Commands;
 
 use Illuminate\Console\Command;
-use Nikaia\TranslationSheet\Spreadsheet;
+use Felrov\TranslationSheet\Spreadsheet;
 
 class Open extends Command
 {

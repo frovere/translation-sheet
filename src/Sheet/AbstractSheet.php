@@ -1,8 +1,8 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Sheet;
+namespace Felrov\TranslationSheet\Sheet;
 
-use Nikaia\TranslationSheet\Spreadsheet;
+use Felrov\TranslationSheet\Spreadsheet;
 
 abstract class AbstractSheet
 {

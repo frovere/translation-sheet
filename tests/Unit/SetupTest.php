@@ -1,12 +1,12 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Test\Unit;
+namespace Felrov\TranslationSheet\Test\Unit;
 
 use Mockery;
-use Nikaia\TranslationSheet\Setup;
-use Nikaia\TranslationSheet\Test\TestCase;
-use Nikaia\TranslationSheet\Sheet\MetaSheet;
-use Nikaia\TranslationSheet\Sheet\TranslationsSheet;
+use Felrov\TranslationSheet\Setup;
+use Felrov\TranslationSheet\Test\TestCase;
+use Felrov\TranslationSheet\Sheet\MetaSheet;
+use Felrov\TranslationSheet\Sheet\TranslationsSheet;
 
 class SetupTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Translation;
+namespace Felrov\TranslationSheet\Translation;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Application;

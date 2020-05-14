@@ -1,13 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Artisan;
-use Nikaia\TranslationSheet\Commands\Prepare;
-use Nikaia\TranslationSheet\Commands\Pull;
-use Nikaia\TranslationSheet\Commands\Push;
-use Nikaia\TranslationSheet\Commands\Setup;
-use Nikaia\TranslationSheet\Spreadsheet;
-use Nikaia\TranslationSheet\Test\FeatureTestCase;
-use Nikaia\TranslationSheet\Util;
+use Felrov\TranslationSheet\Commands\Prepare;
+use Felrov\TranslationSheet\Commands\Pull;
+use Felrov\TranslationSheet\Commands\Push;
+use Felrov\TranslationSheet\Commands\Setup;
+use Felrov\TranslationSheet\Spreadsheet;
+use Felrov\TranslationSheet\Test\FeatureTestCase;
+use Felrov\TranslationSheet\Util;
 
 class SimpleWorkflowTest extends FeatureTestCase
 {

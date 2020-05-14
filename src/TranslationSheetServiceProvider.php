@@ -1,17 +1,17 @@
 <?php
 
-namespace Nikaia\TranslationSheet;
+namespace Felrov\TranslationSheet;
 
 use Illuminate\Support\ServiceProvider;
-use Nikaia\TranslationSheet\Client\Client;
-use Nikaia\TranslationSheet\Commands\Lock;
-use Nikaia\TranslationSheet\Commands\Open;
-use Nikaia\TranslationSheet\Commands\Prepare;
-use Nikaia\TranslationSheet\Commands\Pull;
-use Nikaia\TranslationSheet\Commands\Push;
-use Nikaia\TranslationSheet\Commands\Setup;
-use Nikaia\TranslationSheet\Commands\Status;
-use Nikaia\TranslationSheet\Commands\Unlock;
+use Felrov\TranslationSheet\Client\Client;
+use Felrov\TranslationSheet\Commands\Lock;
+use Felrov\TranslationSheet\Commands\Open;
+use Felrov\TranslationSheet\Commands\Prepare;
+use Felrov\TranslationSheet\Commands\Pull;
+use Felrov\TranslationSheet\Commands\Push;
+use Felrov\TranslationSheet\Commands\Setup;
+use Felrov\TranslationSheet\Commands\Status;
+use Felrov\TranslationSheet\Commands\Unlock;
 
 class TranslationSheetServiceProvider extends ServiceProvider
 {

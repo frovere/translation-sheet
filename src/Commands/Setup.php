@@ -1,6 +1,6 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Commands;
+namespace Felrov\TranslationSheet\Commands;
 
 use Illuminate\Console\Command;
 
@@ -10,7 +10,7 @@ class Setup extends Command
 
     protected $description = 'Setup spreadsheet and get it ready to host translations';
 
-    public function handle(\Nikaia\TranslationSheet\Setup $setup)
+    public function handle(\Felrov\TranslationSheet\Setup $setup)
     {
         $setup->withOutput($this->output)->run();
     }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Commands;
+namespace Felrov\TranslationSheet\Commands;
 
 use Illuminate\Console\Command;
-use Nikaia\TranslationSheet\Puller;
+use Felrov\TranslationSheet\Puller;
 
 class Pull extends Command
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Sheet;
+namespace Felrov\TranslationSheet\Sheet;
 
 class MetaSheet extends AbstractSheet
 {

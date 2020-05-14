@@ -1,6 +1,6 @@
 <?php
 
-namespace Nikaia\TranslationSheet\Translation;
+namespace Felrov\TranslationSheet\Translation;
 
 class Item
 {

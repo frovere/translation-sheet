@@ -1,10 +1,10 @@
 <?php
 
-namespace Nikaia\TranslationSheet;
+namespace Felrov\TranslationSheet;
 
-use Nikaia\TranslationSheet\Commands\Output;
-use Nikaia\TranslationSheet\Sheet\MetaSheet;
-use Nikaia\TranslationSheet\Sheet\TranslationsSheet;
+use Felrov\TranslationSheet\Commands\Output;
+use Felrov\TranslationSheet\Sheet\MetaSheet;
+use Felrov\TranslationSheet\Sheet\TranslationsSheet;
 
 class Setup
 {
